@@ -1,0 +1,11 @@
+section.header
+    .container 
+        .header__wrap 
+            nav.header__nav 
+                .header__nav-logo 
+                    a(href="#").header__nav-logo-router-link {{ logo }}
+                ul.header__nav-row 
+                    li.header__nav-row-item(v-for="link in navLinks")
+                        a(href="#").header__nav-row-link {{ link }}
+                .header__nav-number 
+                    a(href="#").header__nav-number-link {{ number }}

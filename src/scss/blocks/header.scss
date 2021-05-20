@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+  padding: 50px 0 80px;
+  z-index: 1000;
+  background: $mainYellow;
+}
+
+.header__wrap {
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-row {
+  display: flex;
+}
+
+.header__nav-row .header__nav-row-item + .header__nav-row-item {
+  margin-left: 45px;
+}
+
+.header__nav-logo-router-link {
+  color: $mainRed;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.header__nav-row-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $mainRed;
+}
+
+.header__nav-number-link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: $mainRed;
+}
