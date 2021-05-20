@@ -1,0 +1,12 @@
+section.timeline 
+    .container 
+        .timeline-wrap 
+            h4.timeline__title {{timelinetitle}}
+            ul.timeline__table
+                li.timeline__table-item(v-for="(item) in timelinetable") 
+                    .timeline__table-num 
+                        span {{item.number}}
+                    .timeline__table-info
+                        h6.timeline__table-info-title {{item.title}}
+                        p.timeline__table-info-text {{item.text}} 
+

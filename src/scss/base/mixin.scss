@@ -1,0 +1,40 @@
+.btn-red {
+  position: relative;
+  padding: 15px 95px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  font-family: "Montserrat_regular";
+  color: #f2f2f2;
+  cursor: pointer;
+  background: $mainRed;
+  border: none;
+  outline: none;
+  transition: all 0.2s linear 0.2s;
+}
+
+.btn-red::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  content: "";
+  background: transparent;
+  border: 2px solid #f2f2f2;
+  z-index: -1;
+  transition: all 0.2s linear;
+}
+
+.btn-red:hover::before {
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-red:hover {
+  transition-delay: 0.2s;
+  box-shadow: 0px 0px 10px #f2f2f2, 0px 0px 20px #f2f2f2, 0px 0px 40px #f2f2f2;
+}

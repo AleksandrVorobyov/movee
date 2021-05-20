@@ -1,0 +1,50 @@
+.timeline {
+  position: relative;
+  padding: 95px 0 45px;
+  z-index: 500;
+  background: #fff;
+}
+
+.timeline-wrap {
+}
+
+.timeline__title {
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+}
+
+.timeline__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 50px;
+}
+
+.timeline__table-item {
+  display: flex;
+  align-items: flex-start;
+  max-width: 480px;
+}
+
+.timeline__table-num {
+  margin-right: 30px;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 50px;
+  text-shadow: 3px 0px 0px $mainYellow;
+}
+
+.timeline__table-info-title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.timeline__table-info-text {
+  font-size: 16px;
+  line-height: 21px;
+}
