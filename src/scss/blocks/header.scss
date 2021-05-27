@@ -24,66 +24,12 @@
   margin-left: 45px;
 }
 
-.header__nav-logo-router-link {
-  position: relative;
-  color: $mainGrey;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 37px;
-  font-style: normal;
-  letter-spacing: 0em;
-  text-align: left;
-  transition: all 0.2s ease-in-out;
-  z-index: 100;
-
-  &::before {
-    position: absolute;
-    bottom: -2px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: 0;
-    content: "";
-    background: $mainRed;
-    transition: all 0.2s ease-in-out;
-    z-index: -1;
-  }
-}
-
-.header__nav-logo-router-link:hover {
-  color: #fff;
-}
-
-.header__nav-logo-router-link:hover::before {
-  height: calc(100% + 4px);
-}
-
 .header__nav-row-link {
   position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: $mainGrey;
-  font-family: "Montserrat_bold";
-  transition: all 0.2s ease-in-out;
-
-  &::before {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    content: "";
-    background: $mainRed;
-    transition: all 0.2s ease-in-out;
-  }
-}
-
-.header__nav-row-link:hover {
-  color: $mainRed;
-}
-
-.header__nav-row-link:hover::before {
-  height: 3px;
 }
 
 .header__nav-number-link {
@@ -92,7 +38,6 @@
   font-size: 24px;
   line-height: 29px;
   color: $mainGrey;
-  transition: all 0.2s ease-in-out;
 }
 
 .header__nav-number-link::before {

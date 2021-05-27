@@ -3,10 +3,10 @@ section.header
         .header__wrap 
             nav.header__nav 
                 .header__nav-logo 
-                    a(href="#").header__nav-logo-router-link {{ logo }}
+                    a(href="#").logo {{ logo }}
                 ul.header__nav-row 
                     li.header__nav-row-item(v-for="(item) in navLinks")
-                        a(:href='item.link' class='header__nav-row-link') {{ item.text }}
+                        a(:href='item.link' class='link header__nav-row-link') {{ item.text }}
                 .header__nav-number 
                     a(href="#").header__nav-number-link {{ number }}
             .header__body 

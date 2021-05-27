@@ -38,3 +38,86 @@
   transition-delay: 0.2s;
   box-shadow: 0px 0px 10px #f2f2f2, 0px 0px 20px #f2f2f2, 0px 0px 40px #f2f2f2;
 }
+
+.logo {
+  position: relative;
+  color: $mainGrey;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+
+  &::before {
+    position: absolute;
+    bottom: -2px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 0;
+    content: "";
+    background: $mainRed;
+    transition: all 0.2s ease-in-out;
+    z-index: -1;
+  }
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+.logo:hover::before {
+  height: calc(100% + 4px);
+}
+
+.link {
+  position: relative;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $mainGrey;
+  transition: color 0.3s linear 0.3s;
+
+  &::before {
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    transform: scale(0);
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $mainRed;
+    transition: transform 0.3s linear 0.3s;
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -7px;
+    left: 4px;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: $mainRed;
+    transition: width 0.3s linear;
+    pointer-events: none;
+  }
+}
+
+.link:hover {
+  color: $mainRed;
+  transition: color 0.3s linear;
+
+  &::before {
+    transform: scale(1);
+    transition: transform 0.3s linear;
+  }
+
+  &::after {
+    width: 100%;
+    transition: width 0.3s linear 0.3s;
+  }
+}
