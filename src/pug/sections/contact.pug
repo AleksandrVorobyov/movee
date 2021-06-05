@@ -1,0 +1,14 @@
+section.contact#contact
+    .container 
+        .contact-wrap
+            h3.contact__title {{contactTitle}}
+            p.contact__subtitle {{contactSubtitle}}
+            form.contact__form
+                input(type="text" placeholder='Ваше имя' class='contact__form-input' required)
+                input(type="tel" placeholder='Телефон' class='contact__form-input' pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" maxlength="12" required)
+                .contact__form-submit-wrap
+                    button.btn-red.contact__form-submit Перезвонить мне
+                    input(type="checkbox" id='contact-form-check'  name="" required)
+                    label(for='contact-form-check' class='contact__form-submit-label')
+                        span 
+                        span Даю согласие на обработку данных

@@ -1,8 +1,12 @@
 .timeline {
   position: relative;
-  padding: 95px 0 45px;
+  padding: 40px 0 50px;
   z-index: 500;
   background: #fff;
+
+  @media (min-width: 480px) {
+    padding: 95px 0 45px;
+  }
 }
 
 .timeline-wrap {
@@ -10,41 +14,80 @@
 
 .timeline__title {
   margin-bottom: 60px;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 37px;
-  text-align: center;
 }
 
 .timeline__table {
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 30px 30px;
+
+  @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: 720px) {
     gap: 50px 50px;
+  }
 }
 
 .timeline__table-item {
   display: flex;
   align-items: flex-start;
   max-width: 480px;
+  align-items: center;
+  margin: 0 auto;
+  min-width: 280px;
+
+  @media (min-width: 600px) {
+    align-items: flex-start;
+    margin: 0;
+    min-width: none;
+  }
 }
 
 .timeline__table-num {
   margin-right: 30px;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 50px;
   text-shadow: 3px 0px 0px $mainYellow;
+
+  @media (min-width: 720px) {
+    font-size: 50px;
+  }
+}
+
+.timeline__table-info {
+  max-width: 180px;
+
+  @media (min-width: 600px) {
+    max-width: none;
+  }
 }
 
 .timeline__table-info-title {
-  margin-bottom: 15px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
+
+  @media (min-width: 720px) {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
 }
 
 .timeline__table-info-text {
-  font-size: 16px;
+  display: none;
+  font-size: 14px;
   line-height: 21px;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+
+  @media (min-width: 720px) {
+    font-size: 16px;
+  }
 }

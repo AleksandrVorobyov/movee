@@ -1,0 +1,13 @@
+section.map
+    .container 
+        .map__wrap 
+            .map__contact
+                .map__contact-logo 
+                    a(href="#").logo {{logo}}
+                ul.map__contact-link
+                    li.map__contact-link-item(v-for="(item) in mapLinks")
+                        .map__contact-link-item-img 
+                            img(src="./img/svg/check-yellow.svg", alt="check-yellow")
+                        .map__contact-link-item-text {{item.title}}
+                .map__contact-social
+                    +social()

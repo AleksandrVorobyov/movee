@@ -1,0 +1,120 @@
+.contact {
+  position: relative;
+  padding: 120px 0;
+  z-index: 500;
+  background: #fff;
+}
+
+.contact-wrap {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.contact__subtitle {
+  margin-bottom: 35px;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__form-input {
+  padding: 10px 0;
+  width: 300px;
+  height: 60px;
+  background: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(51, 51, 51, 0.7);
+  border: none;
+  border-bottom: 1px solid #333333;
+  outline: none;
+  transition: all 0.3s linear;
+
+  &:focus {
+    border-bottom: 1px solid $mainRed;
+  }
+}
+
+.contact__form-input::placeholder {
+  transition: all 0.3s linear;
+}
+
+.contact__form-input:focus::placeholder {
+  opacity: 0;
+}
+
+.contact__form-submit-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form-submit.btn-red {
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.btn-red.contact__form-submit::before {
+  border-color: $mainYellow;
+}
+
+.contact__form-submit-label {
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  span:nth-child(1) {
+    position: relative;
+    display: block;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 2px solid $mainGrey;
+    border-radius: 3px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      content: "";
+      opacity: 0;
+      background: url("../img/svg/check-black.svg") center center / contain
+        no-repeat;
+    }
+  }
+}
+
+.contact__form-submit-wrap {
+    position: relative;
+}
+
+.contact__form-submit-wrap input {
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+input:checked + .contact__form-submit-label > span:nth-child(1)::before {
+  opacity: 1;
+}

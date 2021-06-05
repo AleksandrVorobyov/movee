@@ -9,6 +9,8 @@ section.header
                         a(:href='item.link' class='link header__nav-row-link') {{ item.text }}
                 .header__nav-number 
                     a(href="#").header__nav-number-link {{ number }}
+                button.header__nav-burger#headerBurger(type='button')
+                    span
             .header__body 
                 .header__body-info 
                     h1.header__body-info-title 

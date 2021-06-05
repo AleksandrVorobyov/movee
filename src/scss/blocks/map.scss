@@ -1,0 +1,46 @@
+.map {
+  position: relative;
+  height: 666px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 500;
+  background: url("../img/map/map.jpg") center center / cover no-repeat;
+}
+
+.map__wrap {
+  position: relative;
+  width: 100%;
+}
+
+.map__contact {
+  max-width: 370px;
+  max-height: 330px;
+  padding: 40px 35px;
+  background: #fff;
+}
+
+.map__contact-logo {
+  margin-bottom: 40px;
+}
+
+.map__contact-link {
+  margin-bottom: 55px;
+}
+
+.map__contact-link-item {
+  display: flex;
+}
+
+.map__contact-link-item + .map__contact-link-item {
+  margin-top: 15px;
+}
+
+.map__contact-link-item-img {
+  margin-right: 15px;
+}
+
+.map__contact-social {
+    display: flex;
+    justify-content: flex-end;
+}

@@ -7,6 +7,9 @@
 @import "./base/animation";
 @import "./base/mixin";
 
+// Mixins
+@import "./mixin/btn";
+
 // Blocks, sections, layouts
 @import "./blocks/**/*.scss";
 @import "./mixin/**/*.scss";

@@ -1,7 +1,8 @@
-section.prices
+section.prices#prices
     .container
         .prices-wrap 
-            h4.prices__title {{pricesTitle}} 
+            .prices__title 
+                +section-title('{{pricesTitle}}')
             h5.prices__subtitle {{pricesSubitle}}
             ul.prices__cards 
                 li.prices__cards-item(v-for="item in pricesCards")
@@ -10,4 +11,4 @@ section.prices
                     p.prices__cards-meta {{item.metaWorker}}
                     p.prices__cards-meta {{item.metaTime}}
                     p.prices__cards-value {{item.price}} 
-                    button.prices__cards-btn(type='button' @mouseleave='pricesBtn($event)') Заказать
+                    button.add-btn(type='button' @mouseleave='pricesBtn($event)') Заказать
