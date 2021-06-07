@@ -22,6 +22,10 @@ body {
   background: #f6f6f6;
 }
 
+.body--hidden {
+  overflow: hidden;
+}
+
 input,
 textarea {
   font-size: 16px;
@@ -66,6 +70,7 @@ img {
 }
 
 .hidden {
+  display: none;
   overflow: hidden;
 }
 
@@ -75,4 +80,39 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 50px;
+  left: 30px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border: 3px solid $mainGrey;
+  border-radius: 50% 50% 50% 50%;
+  background: #fff;
+  transition: border 0.3s linear, bottom 0.5s ease-in;
+  z-index: 2000;
+
+  svg {
+    pointer-events: none;
+  }
+
+  path {
+    transition: fill 0.3s linear;
+  }
+}
+
+.btn-up:hover {
+  border: 3px solid $mainRed;
+
+  path {
+    fill: $mainRed;
+  }
+}
+
+.btn-up--hidden {
+  bottom: -100px;
 }

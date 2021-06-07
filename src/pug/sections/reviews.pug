@@ -3,7 +3,7 @@ section.reviews#reviews
         .reviews-wrap 
             .reviews__title 
                 +section-title('Отзывы')
-            ul.reviews__table
+            ul.reviews__table#reviewsTable
                 li.reviews__table-item(v-for="item in rewiesItems" :key="item.id" :id="item.id")
                     h4.reviews__table-item-title {{item.title}}
                     .reviews__table-item-info 
@@ -17,6 +17,5 @@ section.reviews#reviews
                     .reviews__table-item-text {{item.comment}}
                     button.reviews__table-item-btn(@click = 'reviewsbtn')
                         | Читать полностью 
-
             .reviews__btn
-                +btn-transparent('Все отзывы')
+                +btn-transparent('Все отзывы')#reviewsBtn

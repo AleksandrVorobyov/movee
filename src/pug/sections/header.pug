@@ -1,4 +1,4 @@
-section.header
+section.header#header
     .container 
         .header__wrap 
             nav.header__nav 
@@ -9,7 +9,7 @@ section.header
                         a(:href='item.link' class='link header__nav-row-link') {{ item.text }}
                 .header__nav-number 
                     a(href="#").header__nav-number-link {{ number }}
-                button.header__nav-burger#headerBurger(type='button')
+                button.header__nav-burger#headerBurger(type='button' @click='giveMeActiveClass($event), sidebarActive(), bodyBlock()')
                     span
             .header__body 
                 .header__body-info 

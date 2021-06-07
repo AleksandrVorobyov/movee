@@ -1,8 +1,12 @@
 .prices {
   position: relative;
   padding: 60px 0 70px;
-  background: #fff;
+  background: #f8fbff;
   z-index: 500;
+
+  @media (min-width: 420px) {
+    background: #fff;
+  }
 }
 
 .prices-wrap {
@@ -13,11 +17,16 @@
 }
 
 .prices__subtitle {
+  display: none;
   margin-bottom: 60px;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
+
+  @media (min-width: 420px) {
+    display: block;
+  }
 }
 
 .prices__cards {
@@ -36,11 +45,15 @@
 
 .prices__cards-item {
   width: 100%;
-  height: 580px;
-  padding: 85px 0 80px;
-  background: #ffffff;
-  border: 1px solid #ebebeb;
-  transition: border 0.3s ease-in-out;
+  padding: 40px 0;
+
+  @media (min-width: 420px) {
+    height: 580px;
+    padding: 85px 0 80px;
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    transition: border 0.3s ease-in-out;
+  }
 
   @media (min-width: 480px) {
     width: 420px;
@@ -59,8 +72,10 @@
   }
 }
 
-.prices__cards-item:hover {
-  border: 1px solid $mainYellow;
+@media (min-width: 420px) {
+  .prices__cards-item:hover {
+    border: 1px solid $mainYellow;
+  }
 }
 
 .prices__cards-title {
@@ -87,4 +102,22 @@
   font-size: 30px;
   line-height: 37px;
   text-align: center;
+}
+
+.prices__cards-btn {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .prices__cards-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 131.4%;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }

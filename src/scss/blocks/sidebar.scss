@@ -1,0 +1,31 @@
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: -100%;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 30px 15px;
+  z-index: 1500;
+  background: $mainGrey;
+  transition: left 1s linear;
+  border-top: 2px solid $mainBlue;
+  overflow: scroll;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar__table-item + .sidebar__table-item {
+  margin-top: 20px;
+}
+
+.sidebar__table-item-router-link {
+  display: inline-flex;
+  color: #fff;
+}
+
+.sidebar__table-item-router-link img {
+  width: 50px;
+  height: 50px;
+}

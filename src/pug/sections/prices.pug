@@ -4,7 +4,7 @@ section.prices#prices
             .prices__title 
                 +section-title('{{pricesTitle}}')
             h5.prices__subtitle {{pricesSubitle}}
-            ul.prices__cards 
+            ul.prices__cards#pricesCards
                 li.prices__cards-item(v-for="item in pricesCards")
                     h6.prices__cards-title {{item.title}}  
                     p.prices__cards-meta {{item.metaAuto}}
@@ -12,3 +12,4 @@ section.prices#prices
                     p.prices__cards-meta {{item.metaTime}}
                     p.prices__cards-value {{item.price}} 
                     button.add-btn(type='button' @mouseleave='pricesBtn($event)') Заказать
+            .prices__cards-btn#pricesCardsBtn Все цены

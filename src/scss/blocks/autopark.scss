@@ -28,6 +28,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  z-index: 500;
 }
 
 .autopark__carousel-nav > * + * {
@@ -44,32 +45,51 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  min-width: 200px;
-  padding: 0 20px;
-  background: #ffffff;
-  text-align: center;
-  border: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
   cursor: pointer;
+  
+  @media (min-width: 720px) {
+    height: 50px;
+    min-width: 200px;
+    padding: 0 20px;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #ebebeb;
+  }
 }
 
 .autopark__carousel-nav-item.active > .autopark__carousel-nav-radio + label {
-  border: 1px solid #fed100;
+  border-bottom: 1px solid #fed100;
+
+  @media (min-width: 720px) {
+    border: 1px solid #fed100;
+  }
 }
 
 .autopark__carousel-slide {
+  position: relative;
   display: flex;
-  max-width: 1310px;
   margin: 0 auto;
   transition: all 0.8s ease;
+  z-index: 400;
+  width: 100%;
 }
 
 .autopark__carousel-slide-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 100px;
+  flex-direction: column-reverse;
   min-width: 100%;
+  padding: 0 20px;
+
+  @media (min-width: 480px) {
+    padding: 0 100px;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
 }
 
 .autopark__carousel-slide-desc-title {
@@ -92,16 +112,36 @@
 
 .autopark__carousel-slide-desc-list {
   margin-bottom: 30px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .autopark__carousel-slide-desc + .autopark__carousel-slide-img {
+    margin-left: 40px;
+    margin-bottom: 0;
+  }
 }
 
 .autopark__carousel-slide-desc + .autopark__carousel-slide-img {
-  margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .autopark__carousel-slide-img {
-  width: 640px;
-  height: 450px;
+  width: 100%;
   overflow: hidden;
+
+  @media (min-width: 480px) {
+    width: 450px;
+    height: 300px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 640px;
+    height: 450px;
+  }
 }
 
 .autopark__carousel-slide-img img {
@@ -109,4 +149,28 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.autopark__carousel-arrow {
+  position: absolute;
+  bottom: 250px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+}
+
+.autopark__carousel-arrow-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s linear;
+}
+
+.autopark__carousel-arrow-btn:hover {
+  opacity: 1;
 }

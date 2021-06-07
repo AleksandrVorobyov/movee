@@ -1,8 +1,12 @@
 .reviews {
   position: relative;
-  padding: 100px 0;
+  padding: 60px 0;
   background: $mainYellow;
   z-index: 500;
+
+  @media (min-width: 720px) {
+    padding: 100px 0;
+  }
 }
 
 .reviews__title {
@@ -12,9 +16,26 @@
 .reviews__table {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 30px;
-  margin-bottom: 60px;
+  
+  @media (min-width: 720px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.reviews__table-item {
+  max-width: 420px;
+  margin: 0 auto;
+
+  @media (min-width: 720px) {
+    max-width: none;
+    margin: 0;
+  }
 }
 
 .reviews__table-item-title {
@@ -58,6 +79,7 @@
 
 .reviews__btn {
   width: 100%;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }

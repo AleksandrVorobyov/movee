@@ -1,0 +1,8 @@
+aside.sidebar#sidebar
+    h3.sidebar__title Навигация
+    ul.sidebar__table
+        li.sidebar__table-item(v-for="(item, index) in sidebarLinks")
+            a(:href="item.link").sidebar__table-item-router-link 
+                span
+                    img(:src="'./img/icon/icon-menu-' + index + '.svg'", alt="")
+                span {{ item.text }}

@@ -13,7 +13,7 @@
 <body class="index">
 	<div class="page" id="page" v-cloak="v-cloak">
 		<header>
-			<section class="header">
+			<section class="header" id="header">
 				<div class="container">
 					<div class="header__wrap">
 						<nav class="header__nav">
@@ -22,7 +22,7 @@
 								<li class="header__nav-row-item" v-for="(item) in navLinks"><a class="link header__nav-row-link" :href="item.link">{{ item.text }}</a></li>
 							</ul>
 							<div class="header__nav-number"> <a class="header__nav-number-link" href="#">{{ number }}</a></div>
-							<button class="header__nav-burger" id="headerBurger" type="button"><span></span></button>
+							<button class="header__nav-burger" id="headerBurger" type="button" @click="giveMeActiveClass($event), sidebarActive(), bodyBlock()"><span></span></button>
 						</nav>
 						<div class="header__body">
 							<div class="header__body-info">
@@ -50,6 +50,12 @@
 			</section>
 		</header>
 		<main>
+			<aside class="sidebar" id="sidebar">
+				<h3 class="sidebar__title">Навигация</h3>
+				<ul class="sidebar__table">
+					<li class="sidebar__table-item" v-for="(item, index) in sidebarLinks"><a class="sidebar__table-item-router-link" :href="item.link"> <span><img :src="'./img/icon/icon-menu-' + index + '.svg'" alt="" /></span><span>{{ item.text }}</span></a></li>
+				</ul>
+			</aside>
 			<section class="timeline">
 				<div class="container">
 					<div class="timeline-wrap">
@@ -75,7 +81,7 @@
 							<h3 class="section-title">{{pricesTitle}}</h3>
 						</div>
 						<h5 class="prices__subtitle">{{pricesSubitle}}</h5>
-						<ul class="prices__cards">
+						<ul class="prices__cards" id="pricesCards">
 							<li class="prices__cards-item" v-for="item in pricesCards">
 								<h6 class="prices__cards-title">{{item.title}} </h6>
 								<p class="prices__cards-meta">{{item.metaAuto}}</p>
@@ -85,10 +91,11 @@
 								<button class="add-btn" type="button" @mouseleave="pricesBtn($event)">Заказать</button>
 							</li>
 						</ul>
+						<div class="prices__cards-btn" id="pricesCardsBtn">Все цены</div>
 					</div>
 				</div>
 			</section>
-			<section class="autopark">
+			<section class="autopark" id="autopark">
 				<div class="container">
 					<div class="autopark-wrap">
 						<div class="autopark__title">
@@ -134,7 +141,7 @@
 						<div class="reviews__title">
 							<h3 class="section-title">Отзывы</h3>
 						</div>
-						<ul class="reviews__table">
+						<ul class="reviews__table" id="reviewsTable">
 							<li class="reviews__table-item" v-for="item in rewiesItems" :key="item.id" :id="item.id">
 								<h4 class="reviews__table-item-title">{{item.title}}</h4>
 								<div class="reviews__table-item-info">
@@ -162,7 +169,7 @@
 							</li>
 						</ul>
 						<div class="reviews__btn">
-							<button class="btn-transparent" type="submit"><span>Все отзывы</span></button>
+							<button class="btn-transparent" type="submit" id="reviewsBtn"><span>Все отзывы</span></button>
 						</div>
 					</div>
 				</div>
@@ -255,7 +262,10 @@
 					</div>
 				</div>
 			</section>
-		</footer>
+		</footer><a class="btn-up btn-up--hidden" href="#header" id="btnUp">
+			<svg viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+				<path d="M442.627,185.388L265.083,7.844C260.019,2.78,253.263,0,245.915,0c-7.204,0-13.956,2.78-19.02,7.844L49.347,185.388 c-10.488,10.492-10.488,27.568,0,38.052l16.12,16.128c5.064,5.06,11.82,7.844,19.028,7.844c7.204,0,14.192-2.784,19.252-7.844 l103.808-103.584v329.084c0,14.832,11.616,26.932,26.448,26.932h22.8c14.832,0,27.624-12.1,27.624-26.932V134.816l104.396,104.752 c5.06,5.06,11.636,7.844,18.844,7.844s13.864-2.784,18.932-7.844l16.072-16.128C453.163,212.952,453.123,195.88,442.627,185.388z"></path>
+			</svg></a>
 	</div>
 	<script src="./libs/vue/vue.js"></script>
 	<script src="./js/main.js"></script>
