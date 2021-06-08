@@ -10,6 +10,16 @@
   transition: left 1s linear;
   border-top: 2px solid $mainBlue;
   overflow: scroll;
+
+  @media (min-width: 480px) {
+    top: 140px;
+    height: calc(100% - 140px);
+  }
+
+  @media (min-width: 600px) {
+    width: auto;
+    min-width: 60%;
+  }
 }
 
 .sidebar.active {
@@ -21,11 +31,32 @@
 }
 
 .sidebar__table-item-router-link {
+  position: relative;
   display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
   color: #fff;
+  background: $mainYellow;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  transition: background 0.3s linear;
+
+  span + span {
+    margin-left: 20px;
+  }
+}
+
+.sidebar__table-item-router-link:hover {
+  background: $mainRed;
 }
 
 .sidebar__table-item-router-link img {
   width: 50px;
   height: 50px;
+  object-fit: contain;
+  object-position: center;
 }

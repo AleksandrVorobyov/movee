@@ -340,7 +340,10 @@ const app = Vue.createApp({
     },
     bodyBlock() {
       document.querySelector('body').classList.toggle('body--hidden');
-    }
+    },
+    delActiveClassBurger() {
+      document.getElementById('headerBurger').classList.remove('active');
+    },
   },
   mounted() {
     window.onload = () => {
